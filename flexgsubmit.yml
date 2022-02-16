@@ -1,0 +1,18 @@
+name: Create Flexgroup volume auto provsion as flex group
+  na_ontap_volume:
+    state: present
+    name: ansibleVolume
+    is_infinite: False
+    auto_provision_as: flexgroup
+    size: 200
+    size_unit: mb
+    space_guarantee: none
+    export_policy: default
+    vserver: "{{ vserver }}"
+    hostname: "{{ netapp_hostname }}"
+    username: "{{ netapp_username }}"
+    password: "{{ netapp_password }}"
+    https: False
+    unix_permissions: 777
+    snapshot_policy: default
+    time_out: 0
