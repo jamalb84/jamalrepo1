@@ -1,4 +1,4 @@
 #mypowershellscript
-#to create test ps scrit here
+#to create test ps script here
 
-Get-CimInstance -ClassName Win32_Desktop #| Select-Object -ExcludeProperty "CIM*"
+Get-PSDrive | Select-Object -Property Name,Free,Root | format-table
